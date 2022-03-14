@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-03-14T17:26:14.993Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="454IH4dFkWrFlqT7TseX" version="17.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-14T17:27:52.545Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="tXyRkiK6SboEvK9MIztg" version="17.1.2" type="github">
   <diagram id="YxvS4D-LL8fNlQ251Akh" name="第 1 页">
-    <mxGraphModel dx="1543" dy="720" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1199" dy="720" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -68,7 +68,7 @@
         <mxCell id="aYUkV0Ceu2SjlymIUX1H-29" value="任务C" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="320" y="218" width="60" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="KaBQcw274Nk4PCJn2wYP-5" value="&lt;h1&gt;Futurn异步单元&lt;/h1&gt;&lt;p&gt;执行xihz耗时 = 任务A&amp;nbsp; + 任务C&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-5" value="&lt;h1&gt;Futurn异步单元&lt;/h1&gt;&lt;p&gt;执行耗时 = 任务A&amp;nbsp; + 任务C&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-60" y="330" width="290" height="70" as="geometry" />
         </mxCell>
         <mxCell id="KaBQcw274Nk4PCJn2wYP-41" value="使用Future确实可以获取异步任务的执行结果，但是获取其结果还是会阻塞调用线程的，并没有实现完全异步化处理&lt;br&gt;CompletableFuture类允许以非阻塞方式和基于通知的方式处理结果，其通过设置回调函数方式，让主线程彻底解放出来，实现了实际意义上的异步处理。" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
