@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-03-14T05:31:37.543Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="oS7QWcA8_5oN4yzXRhaE" version="17.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-14T05:36:11.269Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="_8Yeu0feLVPJhX7Q_PXv" version="17.1.2" type="github">
   <diagram id="YxvS4D-LL8fNlQ251Akh" name="第 1 页">
     <mxGraphModel dx="2178" dy="877" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -269,6 +269,106 @@
         </mxCell>
         <mxCell id="KaBQcw274Nk4PCJn2wYP-96" value="futureA&lt;br&gt;.whenComplete(callback)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="40" y="946" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-97" value="人们可以通过如下两种方式来提高系统的能力。● 并行化：使用更多线程和更多的硬件资源。● 在现有资源的使用方式上寻求更高的效率。" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="435" y="258" width="210" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-98" value="第二种方法，寻求现有资源更高的使用率，可以解决资源浪费问题。通过编写异步、非阻塞代码，你就可以使用相同的底层资源将执行切换到另一个活动任务，然后在异步处理完成后返回到当前线程继续进行处理。但是如何在JVM上编写异步代码？Java提供了如下两种异步编程模型。&lt;br&gt;● CallBacks：异步方法没有返回值，但需要额外的回调函数（Lambda或匿名类），在结果可用时调用它们。&lt;br&gt;● Futures：异步方法立即返回Future，异步线程计算任务，并当结果计算出来后设置到Future。但是上面两种方法都有局限性，首先多个Callback难以组合在一起，这将会很快导致代码难以阅读和维护（称为“Callback Hell”）。Future相比Callback要好一些，尽管CompletableFuture在&lt;span style=&quot;color: rgba(0 , 0 , 0 , 0) ; font-family: monospace ; font-size: 0px&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%26lt%3Bh1%26gt%3BDemo%26lt%3B%2Fh1%26gt%3B%26lt%3Bp%26gt%3B(%E4%BC%AA)%E5%BC%82%E6%AD%A5%E8%B0%83%E7%94%A8%E8%80%97%E6%97%B6%EF%BC%9Amax(%20%E4%BB%BB%E5%8A%A1A%20%2C%20%E4%BB%BB%E5%8A%A1B%20)%26amp%3Bnbsp%3B%20%26amp%3Bnbsp%3BcompletableFuturn%26lt%3B%2Fp%26gt%3B%22%20style%3D%22text%3Bhtml%3D1%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3Bspacing%3D5%3BspacingTop%3D-20%3BwhiteSpace%3Dwrap%3Boverflow%3Dhidden%3Brounded%3D0%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22-30%22%20y%3D%22730%22%20width%3D%22465%22%20height%3D%2290%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;&lt;br&gt;Java 8上进行了改进，但它们仍然表现不佳。一起编排多个Future是可行的但不容易，并且它们不支持延迟计算（比如RxJava中的defer操作）和高级错误处理。" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="520" width="460" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-99" value="用户线程A" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="72.5" y="1211" width="70" height="149" as="geometry" />
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-100" value="应用服务" style="shape=umlFrame;whiteSpace=wrap;html=1;width=70;height=30;" vertex="1" parent="1">
+          <mxGeometry x="-57.5" y="1210" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-101" value="用户服务" style="shape=umlFrame;whiteSpace=wrap;html=1;width=60;height=21;" vertex="1" parent="1">
+          <mxGeometry x="252.5" y="1210" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-102" value="商品服务" style="shape=umlFrame;whiteSpace=wrap;html=1;width=60;height=20;" vertex="1" parent="1">
+          <mxGeometry x="251.5" y="1316" width="151" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-103" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.014;exitY=0.088;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="143.48000000000002" y="1220.5600000000004" as="sourcePoint" />
+            <mxPoint x="252.5" y="1220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-104" value="添加用户收藏" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KaBQcw274Nk4PCJn2wYP-103">
+          <mxGeometry x="-0.2525" relative="1" as="geometry">
+            <mxPoint x="8" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-105" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.986;entryY=0.171;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="252.5" y="1233.9999999999998" as="sourcePoint" />
+            <mxPoint x="141.51999999999998" y="1234.52" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-106" value="futurnA" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KaBQcw274Nk4PCJn2wYP-105">
+          <mxGeometry x="0.0451" y="-2" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-107" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.014;exitY=0.663;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="142.48000000000002" y="1336.5600000000002" as="sourcePoint" />
+            <mxPoint x="251.5" y="1337" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-108" value="获取商品详情" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KaBQcw274Nk4PCJn2wYP-107">
+          <mxGeometry x="-0.0668" y="2" relative="1" as="geometry">
+            <mxPoint x="-1" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-109" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="251.5" y="1347" as="sourcePoint" />
+            <mxPoint x="141.5" y="1347" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-110" value="任务A" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="322.5" y="1210" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-111" value="任务C" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="321.5" y="1316" width="81" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-112" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.014;exitY=0.088;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="143.48000000000002" y="1256.56" as="sourcePoint" />
+            <mxPoint x="252.5" y="1256" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-113" value="添加用户标签" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KaBQcw274Nk4PCJn2wYP-112">
+          <mxGeometry x="-0.2525" relative="1" as="geometry">
+            <mxPoint x="8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-114" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.986;entryY=0.171;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="252.5" y="1270" as="sourcePoint" />
+            <mxPoint x="141.51999999999998" y="1270.52" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-115" value="futurnB" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KaBQcw274Nk4PCJn2wYP-114">
+          <mxGeometry x="0.0712" y="3" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-116" value="任务B" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="322.5" y="1250" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-117" value="异步单元" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="82.5" y="1227" width="60" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-118" value="异步单元" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="82.5" y="1260" width="60" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-119" value="futureA&lt;br&gt;.whenComplete(callback)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="37.5" y="1316" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KaBQcw274Nk4PCJn2wYP-120" value="&lt;h1&gt;Demo&lt;/h1&gt;&lt;p&gt;&amp;nbsp;completableFuturn：callback hell&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="1110" width="465" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
