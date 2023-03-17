@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-03-17T07:37:47.016Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="3827W12YfD5lB-98AgLV" version="17.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-17T07:43:53.529Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="laUh7TM-VB-c9c6YIQvb" version="17.2.2" type="github">
   <diagram id="prtHgNgQTEPvFCAcTncT" name="Page-1">
-    <mxGraphModel dx="1186" dy="613" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="946" dy="613" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -47,6 +47,14 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="CR6LkncwCoMP8c3s7geg-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="CR6LkncwCoMP8c3s7geg-1" target="CR6LkncwCoMP8c3s7geg-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CR6LkncwCoMP8c3s7geg-25" value="&lt;font style=&quot;font-size: 12px&quot;&gt;后续扩容扩展分表&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;" vertex="1" connectable="0" parent="CR6LkncwCoMP8c3s7geg-24">
+          <mxGeometry x="-0.8" y="-1" relative="1" as="geometry">
+            <mxPoint x="75" y="29" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="CR6LkncwCoMP8c3s7geg-1" value="分表&lt;br&gt;tableA-2" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;align=center;" vertex="1" parent="1">
           <mxGeometry x="240" y="375" width="80" height="60" as="geometry" />
         </mxCell>
@@ -73,6 +81,23 @@
         </mxCell>
         <mxCell id="CR6LkncwCoMP8c3s7geg-15" value="&lt;h1&gt;旧(库)表迁移（不停机）&lt;/h1&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;1.【两个方案】&lt;/span&gt;&lt;p style=&quot;font-size: 14px&quot;&gt;&lt;font style=&quot;font-size: 14px&quot;&gt;旧表数据同步到新分表&lt;/font&gt;&lt;/p&gt;&lt;font style=&quot;font-size: 14px&quot;&gt;&lt;span style=&quot;text-align: center&quot;&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;background-color: rgb(248 , 249 , 250)&quot;&gt;1.1&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: rgb(255 , 255 , 255)&quot;&gt;DTS实时同步任务：同步策略与sharding分表策略相同&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;span style=&quot;text-align: center&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: center&quot;&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;1.2 canal订阅binlog监听，完成分表存量数据同步任务&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;/font&gt;&lt;p style=&quot;font-size: 14px&quot;&gt;&lt;font style=&quot;font-size: 14px&quot;&gt;2.选择低流量时间灰度发布shardingJdbc新服务实行新分表读写，自行灰度账号验证数据读写是否正确。&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 14px&quot;&gt;&lt;font style=&quot;font-size: 14px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 14px&quot;&gt;3.验证没问题，全量发布新服务，实行新分表读写&lt;/p&gt;&lt;p style=&quot;font-size: 14px&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 14px&quot;&gt;&lt;span&gt;4.观察线上流量，没问题则可回收/truncate掉旧表数据，释放存储空间&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 14px&quot;&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 14px&quot;&gt;&lt;span&gt;5.验证有问题【回滚方案】：灰度服务不发布，切换会旧服务旧表运行，迁移升级失败。&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="650" y="30" width="370" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="CR6LkncwCoMP8c3s7geg-21" value="分表&lt;br&gt;tableA-3" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="90" y="500" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CR6LkncwCoMP8c3s7geg-23" value="分表&lt;br&gt;tableA-4" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="390" y="500" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CR6LkncwCoMP8c3s7geg-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="dNxyNK7c78bLwvsdeMH5-34" target="CR6LkncwCoMP8c3s7geg-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CR6LkncwCoMP8c3s7geg-27" value="后续修改sharding分表策略&lt;br&gt;扩容扩展分表" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="CR6LkncwCoMP8c3s7geg-26">
+          <mxGeometry x="0.1255" relative="1" as="geometry">
+            <mxPoint y="51" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CR6LkncwCoMP8c3s7geg-28" value="&lt;h1&gt;扩容扩展分表&lt;/h1&gt;&lt;p&gt;注意点：&lt;span&gt;分表策略，一定要用加上“时间戳+业务键”策略，这样以后扩展分表，才能新产生的数据读写扩展新表，旧的读写“旧表”&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="90" y="570" width="320" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
