@@ -1,11 +1,37 @@
-<mxfile host="app.diagrams.net" modified="2023-03-30T07:07:37.678Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="tRh8l1rc8d7rCNSrFtOr" version="21.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-12T07:00:35.462Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="abecyeG-b6Gc7oWRi2XV" version="21.0.8" type="github">
   <diagram name="第 1 页" id="vBeCggJgNbK71FnL0D5A">
     <mxGraphModel dx="1194" dy="615" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="eFJS-Vujp68ZRDwPc0Qx-2" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="50" y="190" width="120" height="60" as="geometry" />
+        <mxCell id="eFJS-Vujp68ZRDwPc0Qx-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="eFJS-Vujp68ZRDwPc0Qx-7" target="eFJS-Vujp68ZRDwPc0Qx-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eFJS-Vujp68ZRDwPc0Qx-7" value="" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.pc;" vertex="1" parent="1">
+          <mxGeometry x="390" y="60" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="eFJS-Vujp68ZRDwPc0Qx-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="eFJS-Vujp68ZRDwPc0Qx-8" target="eFJS-Vujp68ZRDwPc0Qx-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eFJS-Vujp68ZRDwPc0Qx-8" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.mobile_client;fillColor=#D2D3D3;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="280" y="60" width="40" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="eFJS-Vujp68ZRDwPc0Qx-15" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/server_farm.svg;" vertex="1" parent="1">
+          <mxGeometry x="314" y="187" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="eFJS-Vujp68ZRDwPc0Qx-17" value="app service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="159" y="330" width="121" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eFJS-Vujp68ZRDwPc0Qx-13" value="reply-agent" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/dompicon-glyph-file-format-2/256/file-jar-format-type-128.png" vertex="1" parent="1">
+          <mxGeometry x="130" y="310" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="eFJS-Vujp68ZRDwPc0Qx-19" value="Interface1, Interface2..." style="html=1;verticalAlign=bottom;labelBackgroundColor=none;startArrow=oval;startFill=0;startSize=8;endArrow=none;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-1" y="3" relative="1" as="geometry">
+            <mxPoint x="159" y="450" as="sourcePoint" />
+            <mxPoint x="319" y="450" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
